@@ -12,4 +12,8 @@ public class TestGitController {
     public void test(){
         System.out.println("测试新增文件！");
     }
+
+    public void test02(){
+        System.out.println("测试新增文件！");
+    }
 }
