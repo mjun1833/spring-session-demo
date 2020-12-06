@@ -72,4 +72,8 @@ public class ThymeleafController {
         model.addAttribute("msg","hello 网易云音乐是一款专注于发现与分享的音乐产品,依托专业音乐人、DJ、好友推荐及社交功能,为用户打造全新的音乐生活。\n");
         return "index06";
     }
+
+    public void test(){
+        System.out.println("hello github");
+    }
 }
