@@ -76,4 +76,8 @@ public class ThymeleafController {
     public void test(){
         System.out.println("hello github");
     }
+
+    public void test02(){
+        System.out.println("测试commit和push一起");
+    }
 }
