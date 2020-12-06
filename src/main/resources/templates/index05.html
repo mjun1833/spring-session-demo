@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>index04</title>
+</head>
+<body>
+<!--th:if成立显示-->
+<h1 th:if="${flag=='yes'}">腾讯</h1>
+<!--th:unless-->
+<h1 th:unless="${flag=='no'}">阿里</h1>
+<!--switch-->
+<div th:switch="${menu}">
+    <p th:case="admin">user is admin</p>
+    <p th:case="manager">user is manager</p>
+</div>
+<br>
+<!--引入片段-->
+<!--将片段样式去掉-->
+<div th:include="~{footer :: copy}"></div>
+<!--将片段直接插入页面样式之中-->
+<div th:insert="~{footer :: copy}"></div>
+<!--将片段的样式替换掉页面样式-->
+<div th:replace="~{footer :: copy}"></div>
+</body>
+</html>

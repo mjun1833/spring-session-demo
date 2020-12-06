@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>object</title>
+</head>
+<body>
+<h1 th:text="${msg}"></h1>
+<hr>
+map:
+<h1 th:text="${map.src01}"></h1>
+<h1 th:text="${map.src02}"></h1>
+<hr>
+user:
+id:<span th:text="${user.id}"></span>
+name:<span th:text="${user.name}"></span>
+age:<span th:text="${user.age}"></span>
+</body>
+</html>

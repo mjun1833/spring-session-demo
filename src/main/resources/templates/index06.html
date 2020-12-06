@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>index04</title>
+    <!--优先使用：th:href-->
+    <!--当我们在没有后台渲染的情况下，浏览器会认得href，但是不认得th:href-->
+    <link rel="stylesheet" type="text/css" media="all" href="../static/jquery.min.js" th:href="@{/jquery.min.js}"/>
+</head>
+<body>
+<!--日期格式化-->
+<p th:text="${#dates.format(date,'yyyy年MM月dd日 hh:mm:ss')}"></p>
+<br>
+<!--数字格式化 参数二：整数保留位数，0.12，参数三：小数位保留位数四舍五入-->
+<span th:text="${#numbers.formatDecimal(num,1,2)}"></span>
+<br>
+<!--String内置函数-->
+<span th:if="${!#strings.isEmpty(msg)}">hello str</span><br>
+<!--取前n-3个字符，后续使用...代替-->
+<span th:text="${#strings.abbreviate(msg,20)}"></span><br>
+<!--截取字符串-->
+<span th:text="${#strings.substring(msg,0,20)}"></span><br>
+</body>
+</html>
